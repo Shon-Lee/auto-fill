@@ -97,7 +97,7 @@ export default function App() {
 
     try {
       const payload = buildTemplatePayload(type, data);
-      await generateDoc(`/templates/${type}.docx`, payload, `${type}.docx`);
+      await generateDoc(`templates/${type}.docx`, payload, `${type}.docx`);
       setStatus(UI_TEXT.exportSuccess);
     } catch (error) {
       setStatus(`Xu\u1ea5t Word th\u1ea5t b\u1ea1i: ${error.message}`);

@@ -3,11 +3,15 @@ import PizZip from "pizzip";
 import { saveAs } from "file-saver";
 
 export async function generateDoc(templatePath, data, filename) {
+  const baseUrl = import.meta.env.BASE_URL || "/";
+  const normalizedPath = templatePath.startsWith("/")
+    ? `${baseUrl.replace(/\/$/, "")}${templatePath}`
+    : `${baseUrl}${templatePath}`.replace(/([^:]\/)\/+/g, "$1");
   const separator = templatePath.includes("?") ? "&" : "?";
-  const cacheBustedPath = `${templatePath}${separator}t=${Date.now()}`;
+  const cacheBustedPath = `${normalizedPath}${separator}t=${Date.now()}`;
   const response = await fetch(cacheBustedPath, { cache: "no-store" });
   if (!response.ok) {
-    throw new Error(`Khong tim thay template: ${templatePath}`);
+    throw new Error(`Không tìm thấy template: ${normalizedPath}`);
   }
 
   const content = await response.arrayBuffer();
