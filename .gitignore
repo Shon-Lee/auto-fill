@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+generated/*.docx
+generated/*.pdf
+generated/*.xlsx

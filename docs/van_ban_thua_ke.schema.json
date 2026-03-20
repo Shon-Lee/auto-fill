@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "van_ban_thua_ke.schema.json",
+  "title": "van_ban_thua_ke",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dia_diem_ubnd_xa",
+    "ds_nguoi_thua_ke",
+    "ten_cha_da_mat",
+    "ten_me_da_mat",
+    "noi_dung_thua_ke",
+    "xa_chung_thuc",
+    "nguoi_thuc_hien_chung_thuc",
+    "nguoi_tiep_nhan_ho_so",
+    "nguoi_duoc_cap_ban",
+    "so_quyen_chung_thuc"
+  ],
+  "properties": {
+    "dia_diem_ubnd_xa": { "type": "string" },
+    "ds_nguoi_thua_ke": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "xung_ho",
+          "ho_ten",
+          "ngay_sinh",
+          "so_cccd",
+          "ngay_cap",
+          "quan_he",
+          "dia_chi_thuong_tru"
+        ],
+        "properties": {
+          "xung_ho": { "type": "string" },
+          "ho_ten": { "type": "string" },
+          "ngay_sinh": { "type": "string" },
+          "so_cccd": { "type": "string" },
+          "ngay_cap": { "type": "string" },
+          "quan_he": { "type": "string" },
+          "dia_chi_thuong_tru": { "type": "string" }
+        }
+      }
+    },
+    "ten_cha_da_mat": { "type": "string" },
+    "ten_me_da_mat": { "type": "string" },
+    "noi_dung_thua_ke": { "type": "string" },
+    "xa_chung_thuc": { "type": "string" },
+    "nguoi_thuc_hien_chung_thuc": { "type": "string" },
+    "nguoi_tiep_nhan_ho_so": { "type": "string" },
+    "nguoi_duoc_cap_ban": { "type": "string" },
+    "so_quyen_chung_thuc": { "type": "string" }
+  }
+}

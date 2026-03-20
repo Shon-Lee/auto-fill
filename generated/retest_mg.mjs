@@ -1,0 +1,13 @@
+﻿import fs from "fs";
+import PizZip from "pizzip";
+import Docxtemplater from "docxtemplater";
+const template='e:/Tool/public/templates/mien_giam.docx';
+const out='e:/Tool/generated/mien_giam_render_test.docx';
+const data={ten_nguoi_nop_thue:'a',ma_so_thue:'a',phuong_xa:'a',quan_huyen:'a',tinh_thanh:'a',dien_thoai:'a'};
+const doc=new Docxtemplater(new PizZip(fs.readFileSync(template)),{paragraphLoop:true,linebreaks:true});
+doc.render(data);
+fs.writeFileSync(out,doc.getZip().generate({type:'nodebuffer'}));
+const txt=new Docxtemplater(new PizZip(fs.readFileSync(out)),{paragraphLoop:true,linebreaks:true}).getFullText();
+const probes=['[01] Tên người nộp thuế: a','[02] Mã số thuế: a','[03a] Phường/xã: a','[03b] Quận/huyện: a','[03c] Tỉnh/thành phố: a','[04] Điện thoại: a'];
+for (const p of probes) console.log(p, txt.includes(p));
+console.log(txt.match(/\[01\][\s\S]*?\[05\]/)?.[0] || 'slice-not-found');

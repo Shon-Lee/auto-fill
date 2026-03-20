@@ -1,0 +1,14 @@
+{
+  "templateId": "vb_mien_giam",
+  "data": {
+    "simple": {
+      "dia_diem_lap_van_ban": "A",
+      "ubnd_xa_kinh_gui": "a",
+      "ten_nguoi_nop_thue": "a",
+      "ma_so_thue": "a",
+      "phuong_xa": "a",
+      "chu_ky_ho_ten": "a"
+    },
+    "repeat": {}
+  }
+}

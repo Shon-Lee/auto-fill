@@ -1,0 +1,36 @@
+{
+  "templateId": "van_ban_thua_ke",
+  "data": {
+    "simple": {
+      "gio_lap": "â",
+      "phut_lap": "A",
+      "ngay_lap": "A",
+      "thang_lap": "A",
+      "dia_diem_ubnd_xa": "A",
+      "ten_cha_da_mat": "A",
+      "ten_me_da_mat": "A",
+      "noi_dung_thua_ke": "A",
+      "xa_chung_thuc": "A",
+      "ngay_chung_thuc": "A",
+      "thang_chung_thuc": "A",
+      "nam_chung_thuc_bang_chu": "A",
+      "nguoi_thuc_hien_chung_thuc": "A",
+      "nguoi_tiep_nhan_ho_so": "A",
+      "nguoi_duoc_cap_ban": "A",
+      "so_quyen_chung_thuc": "A"
+    },
+    "repeat": {
+      "ds_nguoi_thua_ke": [
+        {
+          "xung_ho": "A",
+          "ho_ten": "A",
+          "ngay_sinh": "A",
+          "so_cccd": "A",
+          "ngay_cap": "A",
+          "quan_he": "A",
+          "dia_chi_thuong_tru": "A"
+        }
+      ]
+    }
+  }
+}

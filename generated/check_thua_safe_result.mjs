@@ -1,0 +1,11 @@
+﻿import fs from "fs";
+import PizZip from "pizzip";
+import Docxtemplater from "docxtemplater";
+const p='e:/Tool/public/templates/thua_ke.docx';
+const d=new Docxtemplater(new PizZip(fs.readFileSync(p)),{paragraphLoop:true,linebreaks:true});
+const t=d.getFullText()||'';
+const tags=(t.match(/\{[^\}]+\}/g)||[]);
+console.log('tags', tags.slice(0,80).join(' | '));
+console.log('has header fields', t.includes('{gio_lap}'), t.includes('{dia_diem_ubnd_xa}'));
+console.log('has parents', t.includes('{ten_cha_da_mat}'), t.includes('{ten_me_da_mat}'));
+console.log('has cert', t.includes('{nguoi_tiep_nhan_ho_so}'), t.includes('{nguoi_thuc_hien_chung_thuc}'));

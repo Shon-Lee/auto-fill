@@ -1,0 +1,16 @@
+﻿{
+    "data":  {
+                 "repeat":  {
+
+                            },
+                 "simple":  {
+                                "ubnd_xa_kinh_gui":  "Xuan Truong",
+                                "dia_diem_lap_van_ban":  "Xuan Truong",
+                                "phuong_xa":  "Xuan Truong",
+                                "chu_ky_ho_ten":  "Nguyen Van A",
+                                "ma_so_thue":  "123456789",
+                                "ten_nguoi_nop_thue":  "NGUYEN VAN A"
+                            }
+             },
+    "templateId":  "vb_mien_giam"
+}
